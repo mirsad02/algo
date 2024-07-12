@@ -38,11 +38,20 @@ def make_heap(q, s, n):
         pq_insert(q, s[i])
         i = i + 1
 
-priority_queue = {
-    'n': 0,
-    'q': []
-}
-heap = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]
+
+array = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]
+
+def heapsort(s, n):
+    i = 0
+    q = {
+        'n': 0,
+        'q': []
+    }
+    while i < n:
+        i = i + 1
+
+    return q
     
-make_heap(priority_queue, heap, 20)
+    
+priority_queue = heapsort(array, 20)
 print(priority_queue)
