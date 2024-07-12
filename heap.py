@@ -16,10 +16,9 @@ def pq_swap(q, p, parent):
 def bubble_up(q, p):
     if pq_parent(p) == -1:
         return;
-    if q['q'][pq_parent(p)] > q['q']['p']:
+    if q['q'][pq_parent(p)] > q['q'][p]:
         pq_swap(q, p, pq_parent(p))
-        print('swap')
-        #bubble_up(q, pq_parent(p))
+        bubble_up(q, pq_parent(p))
         
 def pq_insert(q, x):
     if q['n'] > 99999999999:
@@ -43,6 +42,7 @@ priority_queue = {
     'n': 0,
     'q': []
 }
-heap = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+heap = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
     
 make_heap(priority_queue, heap, 20)
+print(priority_queue)
