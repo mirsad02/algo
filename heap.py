@@ -14,7 +14,6 @@ def pq_swap(q, p, parent):
     item = q['q'][p]
     q['q'][p] = q['q'][parent];
     q['q'][parent] = item
-    print(q['q'])
 
 def bubble_up(q, p):
     if pq_parent(p) == -1:
@@ -25,12 +24,9 @@ def bubble_up(q, p):
         bubble_up(q, pq_parent(p))
         
 def pq_insert(q, x):
-    if q['n'] > 99999999999:
-        return -1
-    else:    
-        q['n'] = q['n'] + 1
-        q['q'].insert(q['n'], x)
-        bubble_up(q, q['n'])
+    q['n'] = q['n'] + 1
+    q['q'].insert(q['n'], x)
+    bubble_up(q, q['n'])
         
 def pq_init(q):
     q['n'] = -1
