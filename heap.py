@@ -19,6 +19,7 @@ def pq_swap(q, p, parent):
 def bubble_up(q, p):
     if pq_parent(p) == -1:
         return
+    #min-heap max-heap
     if q['q'][pq_parent(p)] > q['q'][p]:
         pq_swap(q, p, pq_parent(p))
         bubble_up(q, pq_parent(p))
